@@ -73,6 +73,8 @@ class SetStatus extends ElementAction
                         // Update the submission info now the draft is gone
                         $submission->ownerId = $newEntry->id;
                         $submission->ownerDraftId = null;
+                        $submission->publisherId = $currentUser->id;
+                        $submission->dateApproved = new \DateTime;
                     }
                 }
             }
